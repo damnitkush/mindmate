@@ -1,6 +1,7 @@
 import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import { BsBox } from "react-icons/bs";
+import { VscDebugBreakpointLogUnverified } from "react-icons/vsc";
+import { IoIosArrowForward } from "react-icons/io";
 
 import { GiBrain } from "react-icons/gi";
 import { MdContactSupport } from "react-icons/md";
@@ -11,7 +12,7 @@ import { Footer } from "../../components/main/Footer";
 const Home = () => {
   return (
     <div>
-      <div className="pt-24 px-16 w-full flex flex-col gap-40">
+      <div className="py-24 px-16 w-full flex flex-col gap-40">
         <div className="flex justify-between items-center gap-10">
           <div className="flex flex-col gap-4">
             <h1 className="text-5xl font-bold leading-normal">
@@ -97,7 +98,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex justify-center">
+        <div className="flex justify-center gap-32">
           <div className="flex flex-col gap-8">
             <h1 className="font-bold text-5xl leading-normal">
               Connect with supportive peers for mental well-being
@@ -112,47 +113,46 @@ const Home = () => {
             </p>
             <div className="flex flex-col gap-2">
               <div className="flex items-center gap-3">
-                <BsBox />
+                <VscDebugBreakpointLogUnverified />
                 Find comfort and guidance in a compassionate community
               </div>
 
               <div className="flex items-center gap-3">
-                <BsBox />
+                <VscDebugBreakpointLogUnverified />
                 Share your journey and inspire others on their path
               </div>
 
               <div className="flex items-center gap-3">
-                <BsBox />
+                <VscDebugBreakpointLogUnverified />
                 Discover new perspectives and coping strategies for mental
                 well-being
               </div>
             </div>
 
-            <div className="flex justify-center gap-5 w-1/2">
-              <button className="border border-black py-1 px-6 rounded-lg ">
+            <div className=" flex gap-4 mt-4">
+              <button className="rounded-sm border border-primary-800 hover:bg-primary-800 text-primary-800 hover:text-primary-50 active:bg-primary-900 transition-all px-8 py-2">
                 Join
               </button>
-              <button className="py-3 px-6 flex gap-2 items-center">
-                Learn More <AiOutlineArrowRight />
+              <button className="flex gap-1 hover:gap-2 hover:text-primary-700 cursor-pointer transition-all items-center py-2 px-4">
+                Learn More <IoIosArrowForward />
               </button>
             </div>
           </div>
-          <div>
-            <img className="w-[1000px] rounded-sm mr-2" src={peers} alt="" />
-          </div>
+
+          <img className="w-1/3" src={peers} alt="" />
         </div>
 
-        <div className="flex w-11/12 gap-7 justify-center">
-          <h1 className="font-bold text-3xl">
+        <div className="grid grid-cols-2 w-full items-center">
+          <h1 className="font-bold text-4xl pr-44">
             Connect with supportive peer allies
           </h1>
-          <div>
+          <div className="w-1/2 flex flex-col gap-2">
             <p>Discover a community that understands</p>
-            <div className="flex justify-center gap-6 mt-4">
-              <button className="text-white bg-black py-3 px-6 rounded-lg">
+            <div className=" flex gap-4 mt-4">
+              <button className="rounded-sm border  border-transparent bg-primary-800 text-primary-50 hover:bg-primary-900 active:bg-primary-950 transition-all px-8 py-2">
                 Join
               </button>
-              <button className="border border-black py-3 px-6 rounded-lg">
+              <button className="rounded-sm border border-primary-800 hover:bg-primary-100 text-primary-800 active:bg-primary-200 transition-all px-8 py-2">
                 Learn More
               </button>
             </div>
