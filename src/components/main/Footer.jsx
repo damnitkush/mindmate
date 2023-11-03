@@ -1,5 +1,5 @@
 import React from "react";
-import { logoLightText } from "../assets";
+import { logoTransparent } from "../../assets/assets";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
 import { Link } from "react-router-dom";
 export const Footer = () => {
@@ -7,7 +7,7 @@ export const Footer = () => {
     <div className="w-screen">
       <div className="bg-black text-[#949494] flex flex-wrap flex-col sm:flex-row  py-20 font-titleFont px-5 md:px-10  lg:px-20 xl:px-40 gap-8 lg:gap-12  justify-between">
         <div className="flex flex-col gap-4">
-          <img src={logoLightText} className="w-48 sm:w-60" alt="" />
+          <img src={logoTransparent} className="w-48 sm:w-60" alt="" />
           <input
             type="text"
             placeholder="Enter your email"
@@ -53,7 +53,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="w-full bg-[#21821E] text-white h-10 text-center mobile:text-sm font-bodyFont text-xs py-1 md:text-base flex items-center justify-center">
-        &copy; Copyright 2023 Wearworx - All Rights Reserved
+        &copy; Copyright 2023 MindMate - All Rights Reserved
       </div>
     </div>
   );
