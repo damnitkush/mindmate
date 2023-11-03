@@ -46,34 +46,37 @@ const Navbar = ({ isHome }) => {
   return (
     <div
       className={`py-3 px-16 flex justify-between items-center sticky top-0 z-50 transition-all ${
-        !isHome && "bg-gradient-to-r from-primary-500 to-primary-600"
+        !isHome &&
+        "bg-gradient-to-r from-primary-100 to-primary-200 text-primary-900"
       }`}
       id="navbar"
     >
       {/* <div className="z-[100] absolute left-0 top-0 bg-gradient-to-r from-primary-400 to-primary-600 h-full w-full"></div> */}
-      <Link to="/" className="flex items-center gap-4">
-        <img src={logoTransparent} className="w-14" alt="" />
-        <span className="text-3xl font-bold text-white">MindMate</span>
+      <Link to="/" className="flex items-center gap-4 ">
+        <div className="w-full rounded-full bg-primary-800">
+          <img src={logoTransparent} className="w-14" alt="" />
+        </div>
+        <span className="text-3xl font-bold text-primary-900">MindMate</span>
       </Link>
       <div className="flex gap-10 text-base font-medium items-center">
         <Link
           to="/"
-          className="text-white hover:text-secondary-300  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-secondary-400 hover:translate-y-[0.1rem] transition-all  py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300"
+          className=" hover:text-primary-700  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-primary-700 hover:translate-y-[0.1rem] transition-all  py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300"
         >
           Home
         </Link>
-        <span className="text-white hover:text-secondary-300  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-secondary-400 hover:translate-y-[0.1rem] transition-all  py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300">
+        <span className=" hover:text-primary-700  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-primary-700 hover:translate-y-[0.1rem] transition-all  py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300">
           Features
         </span>
-        <span className="text-white hover:text-secondary-300  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-secondary-400 hover:translate-y-[0.1rem] transition-all  py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300">
+        <span className=" hover:text-primary-700  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-primary-700 hover:translate-y-[0.1rem] transition-all  py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300">
           Resources
         </span>
-        <span className="text-white hover:text-secondary-300  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-secondary-400 hover:translate-y-[0.1rem] transition-all  py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300">
+        <span className=" hover:text-primary-700  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-primary-700 hover:translate-y-[0.1rem] transition-all  py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300">
           Blog
         </span>
         <Link
           to="/contact"
-          className="text-white hover:text-secondary-300  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-secondary-400 hover:translate-y-[0.1rem] transition-all py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300"
+          className=" hover:text-primary-700  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-primary-700 hover:translate-y-[0.1rem] transition-all py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300"
         >
           Contact Us
         </Link>
@@ -84,7 +87,7 @@ const Navbar = ({ isHome }) => {
         <div className="flex gap-2 items-center justify-between">
           <Link
             to="/login"
-            className="py-2 text-center rounded-lg w-28 font-medium shadow-lg   bg-primary-50   cursor-pointer text-primary-800 hover:bg-primary-200 active:bg-primary-400 transition-all"
+            className="py-2 text-center rounded-lg w-28 font-medium shadow-lg   bg-primary-50   cursor-pointer hover:text-primary-50 text-primary-800 hover:bg-primary-600 active:bg-primary-800 transition-all"
           >
             Login
           </Link>

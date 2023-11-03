@@ -106,14 +106,14 @@ const DarkModeToggle = () => {
     <div className="   w-16 h-8 flex rounded-lg overflow-hidden cursor-pointer shadow-md shadow-primary-500/50 border border-primary-50">
       <div
         ref={light}
-        className="w-1/2  h-full flex justify-center items-center transition-all bg-primary-500 hover:bg-primary-600 dark:text-black text-white dark:bg-primary-50 dark:hover:bg-primary-200"
+        className="w-1/2  h-full flex justify-center items-center transition-all bg-primary-600 hover:bg-primary-700 dark:text-black text-white dark:bg-primary-50 dark:hover:bg-primary-300"
         onClick={darkOff}
       >
         <MdLightMode className="text-lg" />
       </div>
       <div
         ref={dark}
-        className="w-1/2 h-full flex justify-center items-center transition-all bg-primary-50 hover:bg-primary-200 dark:bg-primary-500 dark:hover:bg-primary-600 dark:text-white"
+        className="w-1/2 h-full flex justify-center items-center transition-all bg-primary-50 hover:bg-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:text-white"
         onClick={darkOn}
       >
         <MdDarkMode className="text-lg " />
