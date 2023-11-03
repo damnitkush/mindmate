@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
 import { logoTransparent } from "../../assets/assets";
-import { useContext, useEffect, useRef } from "react";
+// import { useContext, useEffect, useRef } from "react";
 import DarkModeToggle from "../DarkModeToggle";
-import Theme from "../../context/darkModeContext";
+// import Theme from "../../context/darkModeContext";
 
 const Navbar = ({ isHome }) => {
   // const { darkMode } = useContext(Theme);
@@ -30,7 +30,7 @@ const Navbar = ({ isHome }) => {
   return (
     <>
       <div
-        id="navTop"
+
         className={`py-3 px-16 flex justify-between items-center sticky scale-y-100 origin-top top-0 z-50 transition-all ${
           !isHome &&
           "bg-gradient-to-r from-primary-100 to-primary-200 text-primary-900"
