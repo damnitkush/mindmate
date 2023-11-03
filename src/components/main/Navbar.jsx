@@ -46,7 +46,7 @@ const Navbar = ({ isHome }) => {
   return (
     <div
       className={`py-3 px-16 flex justify-between items-center sticky top-0 z-50 transition-all ${
-        !isHome && "bg-gradient-to-r from-primary-400 to-primary-600"
+        !isHome && "bg-gradient-to-r from-primary-500 to-primary-600"
       }`}
       id="navbar"
     >
@@ -84,7 +84,7 @@ const Navbar = ({ isHome }) => {
         <div className="flex gap-2 items-center justify-between">
           <Link
             to="/login"
-            className="py-2 text-center rounded-full w-28 font-medium shadow-lg bg-gradient-to-r from-transparent to-secondary-500  bg-secondary-400  text-white cursor-pointer hover:bg-secondary-500 active:bg-secondary-600 transition-all"
+            className="py-2 text-center rounded-lg w-28 font-medium shadow-lg   bg-primary-50   cursor-pointer text-primary-800 hover:bg-primary-200 active:bg-primary-400 transition-all"
           >
             Login
           </Link>

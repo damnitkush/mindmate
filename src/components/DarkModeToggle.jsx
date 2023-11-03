@@ -103,17 +103,17 @@ const DarkModeToggle = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [darkMode]);
   return (
-    <div className="   w-16 h-8 flex rounded-lg overflow-hidden cursor-pointer shadow-md shadow-secondary-500/50">
+    <div className="   w-16 h-8 flex rounded-lg overflow-hidden cursor-pointer shadow-md shadow-primary-500/50 border border-primary-50">
       <div
         ref={light}
-        className="w-1/2  h-full flex justify-center items-center transition-all bg-secondary-400 hover:bg-secondary-500 dark:text-black text-white dark:bg-secondary-50 dark:hover:bg-secondary-100"
+        className="w-1/2  h-full flex justify-center items-center transition-all bg-primary-500 hover:bg-primary-600 dark:text-black text-white dark:bg-primary-50 dark:hover:bg-primary-200"
         onClick={darkOff}
       >
         <MdLightMode className="text-lg" />
       </div>
       <div
         ref={dark}
-        className="w-1/2 h-full flex justify-center items-center transition-all bg-secondary-50 hover:bg-secondary-100 dark:bg-secondary-400 dark:hover:bg-secondary-500 dark:text-white"
+        className="w-1/2 h-full flex justify-center items-center transition-all bg-primary-50 hover:bg-primary-200 dark:bg-primary-500 dark:hover:bg-primary-600 dark:text-white"
         onClick={darkOn}
       >
         <MdDarkMode className="text-lg " />
