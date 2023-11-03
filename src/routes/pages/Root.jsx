@@ -1,7 +1,7 @@
 import React from "react";
 
 const Root = () => {
-  return <div>Root</div>;
+  return <div className="text-6xl">Hello World</div>;
 };
 
 export default Root;
