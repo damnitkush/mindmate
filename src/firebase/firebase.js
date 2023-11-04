@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   GoogleAuthProvider,
   getAuth,
@@ -61,6 +62,9 @@ const signupWithEmail = async (fname, lname, email, password) => {
       email,
       authProvider: "Local",
     });
+
+ 
+    
     // alert("User registered successfully");
   } catch (err) {
     console.error(err);
@@ -96,6 +100,7 @@ const signupWithEmail = async (fname, lname, email, password) => {
 const loginWithEmail = async (email, password) => {
   try {
     await signInWithEmailAndPassword(auth, email, password);
+    
   } catch (err) {
     console.error(err);
     alert(err.message);
@@ -113,9 +118,21 @@ const resetPassword = async (email) => {
   }
 };
 
+ 
 // Logout
 const logout = async () => {
   await signOut(auth);
+  toast.success('Logged out successfully!', {
+    position: "top-right",
+    autoClose: 5000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "light",
+    });
+  
 };
 
 // Get User Details
