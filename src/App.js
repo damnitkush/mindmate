@@ -18,6 +18,7 @@ import { auth } from "./firebase/firebase";
 import FormData from "./routes/pages/FormData";
 import Questions from "./routes/Auth/Questions";
 import Form from "./routes/Auth/Form";
+import Dashboard from "./routes/pages/Dashboard";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -43,8 +44,14 @@ function App() {
     },
     {
       path: "/dashboard",
-      element: <DashboardHome />,
+      element: <Dashboard />,
       errorElement: <ErrorPage />,
+      children: [
+        {
+          path: "home",
+          element: <DashboardHome />,
+        },
+      ],
     },
     { path: "/login", element: <Auth />, errorElement: <ErrorPage /> },
     {
