@@ -5,14 +5,20 @@ import { Link } from "react-router-dom";
 import { dp } from "../../assets/assets";
 import SwitchDarkMode from "../DarkModeToggle";
 import SearchBar from "./SearchBar";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase/firebase";
+import { useContext } from "react";
+import UserContext from "../../context/userContext";
 
 const Navbar = ({ show, setShow, stopCloseModal }) => {
+  const { localUser} = useContext(UserContext)
+
   return (
     <>
       <div className="h-20 px-6 shadow flex items-center justify-between sticky top-0 bg-white dark:bg-gray-800 z-50">
         <div>
           <h1 className="text-2xl font-bold dark:text-slate-50">
-            Hello, Saksham
+            Hello, {localUser.fname}
           </h1>
           <span className="text-sm text-slate-500 dark:text-slate-300">
             Lets organize your work

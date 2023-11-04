@@ -143,11 +143,11 @@ const Home = () => {
           </div>
           
           {/* Fitbit */}
-          <div className="w-full">
+          <div className="w-1/3">
           {/* Peer to Peer */}
           <div className=" flex flex-col h-fit w-full rounded-xl shadow border-t py-8">
             <p className="flex justify-center items-center  font-bold text-3xl">
-              Connect to fitbit
+              Connect to Fitbit
             </p>
 
             <img

@@ -22,6 +22,7 @@ import Dashboard from "./routes/pages/Dashboard";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
+  const [localUser, setLocalUser] = useState("")
   const [blogs, setBlogs] = useState(blogState);
   const router = createBrowserRouter([
     {
@@ -80,7 +81,7 @@ function App() {
   ]);
   return (
     <>
-      <UserContext.Provider value={auth}>
+      <UserContext.Provider value={{auth, localUser, setLocalUser}}>
         <BlogsContext.Provider value={{ blogs, setBlogs }}>
           <Theme.Provider value={{ darkMode, setDarkMode }}>
             <RouterProvider router={router} />

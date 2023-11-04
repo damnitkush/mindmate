@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { logoTransparent } from "../../assets/assets";
 // import DarkModeToggle from "../DarkModeToggle";
@@ -14,33 +14,39 @@ import {
   signInWithGoogle,
   signupWithEmail,
 } from "../../firebase/firebase";
+import Loader from "../Loader";
+import UserContext from "../../context/userContext";
 
 const Signup = () => {
+  const [loader, setLoader] = useState(false);
   const [email, setEmail] = useState("");
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [password, setPassword] = useState("");
 
   const [user, loading] = useAuthState(auth);
-
+  const { setLocalUser} = useContext(UserContext)
   const navigate = useNavigate();
-  useEffect(() => {
-    if (loading) {
-      //   setLoader(true);
-      return;
-    }
-    if (user) {
-      navigate("/");
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [user, loading]);
+  // useEffect(() => {
+  //   if (loading) {
+  //     //   setLoader(true);
+  //     return;
+  //   }
+  //   if (user) {
+  //     navigate("/");
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [user, loading]);
   const register = async () => {
     if (!fname) alert("Please enter first name");
     if (!fname) alert("Please enter last name");
     if (!email) alert("Please enter email");
     if (!password) alert("Please create a password");
     if (fname && lname && email && password) {
+      setLoader(true)
+
       await signupWithEmail(fname, lname, email, password);
+      setLocalUser({fname, lname, email})
 
       navigate("/signup/details");
 
@@ -56,7 +62,8 @@ const Signup = () => {
       });
     }
   };
-  return (
+  return (<>
+    {loader && <Loader/>}
     <div className="w-2/3 px-16 pt-12 duration-700 origin-right">
       <div className="flex justify-between items-center">
         <Link to="/" className="flex items-center gap-4">
@@ -161,6 +168,7 @@ const Signup = () => {
         </button>
       </div>
     </div>
+    </>
   );
 };
 
