@@ -114,8 +114,8 @@ const resetPassword = async (email) => {
 };
 
 // Logout
-const logout = () => {
-  signOut(auth);
+const logout = async () => {
+  await signOut(auth);
 };
 
 // Get User Details

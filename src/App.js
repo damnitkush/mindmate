@@ -14,6 +14,7 @@ import BlogsContext from "./context/blogsContext";
 import Blog from "./routes/root/Blog";
 import UserContext from "./context/userContext";
 import { auth } from "./firebase/firebase";
+import FormData from "./routes/pages/FormData";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -41,6 +42,11 @@ function App() {
     {
       path: "/signup",
       element: <Auth signup />,
+      errorElement: <ErrorPage />,
+    },
+    {
+      path: "/signup/details",
+      element: <FormData />,
       errorElement: <ErrorPage />,
     },
   ]);
