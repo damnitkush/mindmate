@@ -12,6 +12,8 @@ import { Blogs } from "./routes/root/Blogs";
 import { blogState } from "./assets/BlogsState";
 import BlogsContext from "./context/blogsContext";
 import Blog from "./routes/root/Blog";
+import UserContext from "./context/userContext";
+import { auth } from "./firebase/firebase";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -44,11 +46,13 @@ function App() {
   ]);
   return (
     <>
-      <BlogsContext.Provider value={{ blogs, setBlogs }}>
-        <Theme.Provider value={{ darkMode, setDarkMode }}>
-          <RouterProvider router={router} />
-        </Theme.Provider>
-      </BlogsContext.Provider>
+      <UserContext.Provider value={auth}>
+        <BlogsContext.Provider value={{ blogs, setBlogs }}>
+          <Theme.Provider value={{ darkMode, setDarkMode }}>
+            <RouterProvider router={router} />
+          </Theme.Provider>
+        </BlogsContext.Provider>
+      </UserContext.Provider>
     </>
   );
 }

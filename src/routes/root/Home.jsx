@@ -2,12 +2,10 @@ import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { VscDebugBreakpointLogUnverified } from "react-icons/vsc";
 import { IoIosArrowForward } from "react-icons/io";
-
 import { GiBrain } from "react-icons/gi";
 import { MdContactSupport } from "react-icons/md";
 import { RiMentalHealthLine } from "react-icons/ri";
 import { connect, peers } from "../../assets/assets";
-
 import PricingComp from "../../components/main/PricingComp";
 import { Link } from "react-router-dom";
 
@@ -154,7 +152,7 @@ const Home = () => {
             <button className="rounded-lg border  border-transparent bg-primary-800 text-primary-50 hover:bg-primary-900 active:bg-primary-950 transition-all px-8 py-2">
               Join
             </button>
-            <button className="rounded-lg border border-primary-800 hover:bg-primary-100 text-primary-800 active:bg-primary-200 transition-all px-8 py-2">
+            <button className="rounded-lg border border-primary-800 hover:bg-primary-200 text-primary-800 active:bg-primary-300 transition-all px-8 py-2">
               Learn More
             </button>
           </div>

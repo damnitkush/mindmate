@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import { logoTransparent } from "../../assets/assets";
 import { useEffect } from "react";
 import DarkModeToggle from "../DarkModeToggle";
+import { logout } from "../../firebase/firebase";
 
 const Navbar = ({ isHome }) => {
   // const { darkMode } = useContext(Theme);
@@ -73,6 +74,7 @@ const Navbar = ({ isHome }) => {
         <div className="flex gap-8 items-center justify-between">
           {/* <DarkModeToggle /> */}
           <div className="flex gap-2 items-center justify-between">
+            <span onClick={logout}>Logout</span>
             <Link
               to="/login"
               className="py-2 border-t border-t-primary-100 text-center rounded-lg w-28 font-medium shadow   bg-primary-50   cursor-pointer hover:text-primary-50 text-primary-800 hover:bg-primary-500 active:bg-primary-600 transition-all"
