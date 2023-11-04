@@ -5,22 +5,23 @@ import { Link } from "react-router-dom";
 export const Footer = () => {
   return (
     <div className="w-screen">
-      <div className="bg-black text-[#949494] flex flex-wrap flex-col sm:flex-row  py-20 font-titleFont px-5 md:px-10  lg:px-20 xl:px-40 gap-8 lg:gap-12  justify-between">
+      <div className="bg-primary-800 text-[#949494] flex flex-wrap flex-col sm:flex-row  py-20 font-titleFont px-5 md:px-10  lg:px-20 xl:px-40 gap-8 lg:gap-12  justify-between ">
         <div className="flex flex-col gap-4">
-          <img src={logoTransparent} className="w-48 sm:w-60" alt="" />
+          <img src={logoTransparent} className="w-20" alt="" />
           <input
             type="text"
             placeholder="Enter your email"
-            className="bg-transparent border-b-[0.5px] border-b-gray-200 py-2 placeholder:text-gray-300 outline-none text-white text-sm mobile:text-base font-bodyFont font-light"
+            className="w-full bg-transparent border-b-[0.5px] border-b-gray-200 py-2 placeholder:text-gray-300 outline-none text-white text-sm mobile:text-base font-bodyFont font-light"
           />
           <button className="w-fit rounded-full text-sm mobile:text-xs font-bold mt-2 hover:bg-gray-300 transition-all duration-200 bg-gray-100 text-gray-700 px-4 py-3">
             Subscribe
           </button>
         </div>
-        <div className=" text-right text-white pt-4  gap-2  sm:gap-0 flex flex-col items-start min-[780px]:items-end justify-between ">
-          <h2 className="text-base mobile:text-lg font-semibold font-titleFont ">
+        <div className=" text-right text-white pt-4  gap-2  sm:gap-0 flex flex-col items-start min-[780px]:items-end ">
+          <h2 className="mobile:text-lg font-semibold font-titleFont text-2xl ">
             Contact
           </h2>
+          <br/>
           <div className="font-bodyFont mobile:text-base text-sm flex flex-col gap-2 font-extralight items-start min-[780px]:items-end">
             <div className=" flex items-start min-[780px]:items-end">
               Phone : +91 9xxxxxxxx0
@@ -41,10 +42,10 @@ export const Footer = () => {
           </div>
         </div>
         <div className="text-right text-white pt-4  flex flex-col items-start min-[780px]:items-end gap-4">
-          <h2 className="text-base mobile:text-lg font-semibold font-titleFont ">
+          <h2 className="mobile:text-lg font-semibold font-titleFont text-2xl">
             Recent
           </h2>
-          <div className="font-bodyFont font-extralight mobile:text-sm text-xs flex flex-col items-start min-[780px]:items-end gap-2">
+          <div className="font-bodyFont font-extralight mobile:text-sm text-xs flex flex-col items-start min-[780px]:items-end gap-2 ">
             <div>About Us</div>
             <div>Services</div>
             <div>Privacy Policy</div>
