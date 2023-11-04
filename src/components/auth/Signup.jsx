@@ -1,10 +1,15 @@
 import { useEffect, useState } from "react";
+
 import { logoTransparent } from "../../assets/assets";
 // import DarkModeToggle from "../DarkModeToggle";
 import { FcGoogle } from "react-icons/fc";
 // import { RxGithubLogo } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from 'react-toastify';
+
+
 import {
   auth,
   signInWithGoogle,
@@ -37,7 +42,20 @@ const Signup = () => {
     if (!password) alert("Please create a password");
     if (fname && lname && email && password) {
       await signupWithEmail(fname, lname, email, password);
+<<<<<<< HEAD
       navigate("/signup/details");
+=======
+      toast.success('Signed Up Successfully!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+>>>>>>> 78993d12f2287351baf92226444ec6271c527c1c
     }
   };
   return (
