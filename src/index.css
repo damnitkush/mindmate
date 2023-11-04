@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.active {
+  text-decoration: underline;
+  text-underline-offset: 12px;
+  color: #9a3184;
+  text-decoration-thickness: 2px;
+}

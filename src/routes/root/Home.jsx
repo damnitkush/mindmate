@@ -7,13 +7,15 @@ import { GiBrain } from "react-icons/gi";
 import { MdContactSupport } from "react-icons/md";
 import { RiMentalHealthLine } from "react-icons/ri";
 import { connect, peers } from "../../assets/assets";
-import { Footer } from "../../components/main/Footer";
+
+import PricingComp from "../../components/main/PricingComp";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
     <div>
-      <div className="py-24 px-16 w-full flex flex-col gap-40">
-        <div className="flex justify-between items-center gap-10">
+      <div className="py-24 w-full flex flex-col gap-40">
+        <div className="flex justify-between items-center gap-10  px-16">
           <div className="flex flex-col gap-4">
             <h1 className="text-5xl font-bold leading-normal">
               Connecting individuals for mental health support
@@ -23,10 +25,10 @@ const Home = () => {
               platform.
             </span>
             <div className=" flex gap-4 mt-4">
-              <button className="rounded-sm border  border-transparent bg-primary-800 text-primary-50 hover:bg-primary-900 active:bg-primary-950 transition-all px-8 py-2">
+              <button className="rounded-lg border  border-transparent bg-primary-800 text-primary-50 hover:bg-primary-900 active:bg-primary-950 transition-all px-8 py-2">
                 Join
               </button>
-              <button className="rounded-sm border border-primary-800 hover:bg-primary-100 text-primary-800 active:bg-primary-200 transition-all px-8 py-2">
+              <button className="rounded-lg border border-primary-800 hover:bg-primary-100 text-primary-800 active:bg-primary-200 transition-all px-8 py-2">
                 Learn More
               </button>
             </div>
@@ -35,7 +37,7 @@ const Home = () => {
             <img src={connect} alt="" className="" />
           </div>
         </div>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center bg-gradient-to-br from-primary-50 to-primary-100   p-16">
           <div className=" text-4xl font-bold leading-snug w-1/2 pr-40">
             Discover a community of empathetic allies on our Projects
           </div>
@@ -47,7 +49,7 @@ const Home = () => {
             today and start your journey towards improved mental
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-24 ">
+        <div className="grid grid-cols-3 gap-24  px-16">
           <div className="flex flex-col gap-4">
             <span className="w-full h-10">
               <GiBrain className="text-3xl" />
@@ -98,7 +100,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="flex justify-center gap-32">
+        <div className="flex justify-center gap-32  px-16">
           <div className="flex flex-col gap-8">
             <h1 className="font-bold text-5xl leading-normal">
               Connect with supportive peers for mental well-being
@@ -130,7 +132,7 @@ const Home = () => {
             </div>
 
             <div className=" flex gap-4 mt-4">
-              <button className="rounded-sm border border-primary-800 hover:bg-primary-800 text-primary-800 hover:text-primary-50 active:bg-primary-900 transition-all px-8 py-2">
+              <button className="rounded-lg border border-primary-800 hover:bg-primary-800 text-primary-800 hover:text-primary-50 active:bg-primary-900 transition-all px-8 py-2">
                 Join
               </button>
               <button className="flex gap-1 hover:gap-2 hover:text-primary-700 cursor-pointer transition-all items-center py-2 px-4">
@@ -142,24 +144,32 @@ const Home = () => {
           <img className="w-1/3" src={peers} alt="" />
         </div>
 
-        <div className="grid grid-cols-2 w-full items-center">
-          <h1 className="font-bold text-4xl pr-44">
+        <div className="flex flex-col justify-center w-full items-center gap-4 p-16 bg-gradient-to-br from-primary-50 to-primary-100">
+          <h1 className="font-bold text-4xl">
             Connect with supportive peer allies
           </h1>
-          <div className="w-1/2 flex flex-col gap-2">
-            <p>Discover a community that understands</p>
-            <div className=" flex gap-4 mt-4">
-              <button className="rounded-sm border  border-transparent bg-primary-800 text-primary-50 hover:bg-primary-900 active:bg-primary-950 transition-all px-8 py-2">
-                Join
-              </button>
-              <button className="rounded-sm border border-primary-800 hover:bg-primary-100 text-primary-800 active:bg-primary-200 transition-all px-8 py-2">
-                Learn More
-              </button>
-            </div>
+
+          <p>Discover a community that understands</p>
+          <div className=" flex gap-4 mt-4">
+            <button className="rounded-lg border  border-transparent bg-primary-800 text-primary-50 hover:bg-primary-900 active:bg-primary-950 transition-all px-8 py-2">
+              Join
+            </button>
+            <button className="rounded-lg border border-primary-800 hover:bg-primary-100 text-primary-800 active:bg-primary-200 transition-all px-8 py-2">
+              Learn More
+            </button>
           </div>
         </div>
+        <div className="px-16 flex flex-col gap-4">
+          <PricingComp />
+
+          <Link
+            to="/pricing"
+            className="rounded-lg mx-auto mt-10 border border-primary-800 hover:bg-primary-100 text-primary-800 active:bg-primary-200 transition-all px-8 py-2"
+          >
+            View More
+          </Link>
+        </div>
       </div>
-      <Footer />
     </div>
   );
 };
