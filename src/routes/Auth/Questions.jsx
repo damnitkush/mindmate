@@ -5,7 +5,6 @@ const Questions = () => {
   const [questions, setQuestions] = useState({
     recentEmotions: "",
     changersInSleepPattern: "",
-    overallMoodScale: 0,
     lifeEvents: "",
     selfCare: "",
     suicide: "",
@@ -71,22 +70,6 @@ const Questions = () => {
             type="text"
             id="lastName"
             name="lastName"
-            onChange={inputChangeHandler}
-            value={questions.lastName}
-            className="w-full border focus-visible:outline-primary-700 outine-none focus:outline-primary-700 rounded-md p-2 text-sm"
-            required
-          />
-        </div>
-        <div className="flex flex-col gap-2">
-          <label htmlFor="third" className="font-normal text-sm">
-            How would you rate your overall mood on a scale of 1 to 10, with 1
-            being extremely low and 10 being extremely high?
-          </label>
-
-          <textarea
-            type="text"
-            id="third"
-            name="third"
             onChange={inputChangeHandler}
             value={questions.lastName}
             className="w-full border focus-visible:outline-primary-700 outine-none focus:outline-primary-700 rounded-md p-2 text-sm"
