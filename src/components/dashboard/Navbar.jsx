@@ -9,7 +9,7 @@ import SearchBar from "./SearchBar";
 const Navbar = ({ show, setShow, stopCloseModal }) => {
   return (
     <>
-      <div className="h-20 px-6 flex items-center justify-between sticky top-0 bg-white dark:bg-gray-800 z-50 before:content-[''] before:absolute before:bg-transparent before:-left-0 before:-bottom-12 before:h-12 before:w-6 before:rounded-ss-2xl before:shadow-[0_-25px_0_0_#fff] dark:before:shadow-[0_-25px_0_0_#1f2937]">
+      <div className="h-20 px-6 shadow flex items-center justify-between sticky top-0 bg-white dark:bg-gray-800 z-50">
         <div>
           <h1 className="text-2xl font-bold dark:text-slate-50">
             Hello, Saksham
