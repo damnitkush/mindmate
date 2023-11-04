@@ -3,7 +3,8 @@ import logoTransparent from "./logo-transparent.png";
 import connect from "./connect.svg";
 import peers from "./peers.svg";
 import dp from "./dp-trial.png";
-
+import peertopeer from "./peertopeer.svg"
 import authBg from "./authBg.svg";
 import contact from "./contact.svg";
-export { logoColored, logoTransparent, connect, peers, authBg, contact, dp };
+import watch from "./watch.png"
+export { logoColored, logoTransparent, connect, peers, authBg, contact, dp ,peertopeer,watch};

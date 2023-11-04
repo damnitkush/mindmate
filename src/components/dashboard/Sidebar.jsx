@@ -9,7 +9,7 @@ import { Link, NavLink } from "react-router-dom";
 
 const Sidebar = () => {
   return (
-    <div className="h-screen bg-white dark:bg-gray-800 sticky top-0 left-0">
+    <div className="h-screen bg-white dark:bg-gray-800 sticky top-0 left-0 shadow">
       <div className="flex flex-col justify-between h-screen">
         <div>
           <Link to="/" className="flex items-center gap-4 h-20 px-8">
