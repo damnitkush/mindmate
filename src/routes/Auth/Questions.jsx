@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Questions = () => {
@@ -16,6 +16,9 @@ const Questions = () => {
     traumas: "",
     progress: "",
   });
+
+  const [inFormSection, setInFormSection] = useState(false);
+  
   function submitQuestions(event) {
     event.preventDefault();
     console.log(questions);
@@ -228,8 +231,10 @@ const Questions = () => {
           />
         </div>
       </div>
+
       <div className="flex justify-center items-center mt-8">
         <Link
+
           to="/dashboard"
           className="bg-primary-500 w-fit mx-auto px-16 font-medium text-white py-2  rounded-md hover:bg-primary-700
         transition-all duration-200"
