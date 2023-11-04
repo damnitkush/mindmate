@@ -20,8 +20,7 @@ const PricingComp = () => {
           </div>
           <h2 className="text-primary-800 font-semibold text-2xl">Premium</h2>
           <span className="text-sm text-slate-700 font-light">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
-            dignissimos.
+          Users will have the opportunity to connect with individuals who have faced similar challenges in the past and receive assistance in overcoming them.
           </span>
           <div className="flex gap-2 items-end">
             <span className="font-semibold text-5xl text-primary-700">$50</span>
@@ -41,8 +40,7 @@ const PricingComp = () => {
           </div>
           <h2 className="text-primary-800 font-semibold text-2xl">Pro</h2>
           <span className="text-sm text-slate-700 font-light">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
-            dignissimos.
+          Have a personalised user-interface to keep track of user's mental progress
           </span>
           <div className="flex gap-2 items-end">
             <span className="font-semibold text-5xl text-primary-700">$39</span>
@@ -61,8 +59,7 @@ const PricingComp = () => {
           </div>
           <h2 className="text-primary-800 font-semibold text-2xl">Free</h2>
           <span className="text-sm text-slate-700 font-light">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis,
-            dignissimos.
+          Have access to the Blog section to get articles and videos.
           </span>
           <div className="flex gap-2 items-end">
             <span className="font-semibold text-5xl text-primary-700">$0</span>
