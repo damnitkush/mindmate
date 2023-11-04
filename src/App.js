@@ -5,6 +5,7 @@ import ErrorPage from "./ErrorPage";
 import Theme from "./context/darkModeContext";
 import { useState } from "react";
 import Home from "./routes/root/Home";
+import DashboardHome from "./routes/dashboard/Home";
 import Auth from "./routes/pages/Auth";
 import Contact from "./routes/root/Contact";
 import Pricing from "./routes/root/Pricing";
@@ -15,6 +16,8 @@ import Blog from "./routes/root/Blog";
 import UserContext from "./context/userContext";
 import { auth } from "./firebase/firebase";
 import FormData from "./routes/pages/FormData";
+import Questions from "./routes/Auth/Questions";
+import Form from "./routes/Auth/Form";
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -38,6 +41,11 @@ function App() {
         },
       ],
     },
+    {
+      path: "/dashboard",
+      element: <DashboardHome />,
+      errorElement: <ErrorPage />,
+    },
     { path: "/login", element: <Auth />, errorElement: <ErrorPage /> },
     {
       path: "/signup",
@@ -47,7 +55,20 @@ function App() {
     {
       path: "/signup/details",
       element: <FormData />,
+
       errorElement: <ErrorPage />,
+      children: [
+        {
+          path: "",
+          element: <Form />,
+          errorElement: <ErrorPage />,
+        },
+        {
+          path: "questions",
+          element: <Questions />,
+          errorElement: <ErrorPage />,
+        },
+      ],
     },
   ]);
   return (

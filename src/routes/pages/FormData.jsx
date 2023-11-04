@@ -1,6 +1,6 @@
 import React from "react";
-import Form from "../Auth/Form";
-import { Link } from "react-router-dom";
+
+import { Link, Outlet } from "react-router-dom";
 import { logoTransparent } from "../../assets/assets";
 import { Footer } from "../../components/main/Footer";
 
@@ -17,7 +17,7 @@ const FormData = () => {
         <h1 className="font-bold flex text-5xl justify-center items-center">
           Help us understand you better !
         </h1>
-        <Form />
+        <Outlet />
       </div>
       <Footer />
     </>

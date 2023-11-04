@@ -30,13 +30,14 @@ const Signup = () => {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user, loading]);
-  const register = () => {
+  const register = async () => {
     if (!fname) alert("Please enter first name");
     if (!fname) alert("Please enter last name");
     if (!email) alert("Please enter email");
     if (!password) alert("Please create a password");
     if (fname && lname && email && password) {
-      signupWithEmail(fname, lname, email, password);
+      await signupWithEmail(fname, lname, email, password);
+      navigate("/signup/details");
     }
   };
   return (
