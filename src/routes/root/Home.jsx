@@ -2,7 +2,6 @@ import React from "react";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { VscDebugBreakpointLogUnverified } from "react-icons/vsc";
 import { IoIosArrowForward } from "react-icons/io";
-
 import { GiBrain } from "react-icons/gi";
 import { MdContactSupport } from "react-icons/md";
 import { RiMentalHealthLine } from "react-icons/ri";
@@ -171,6 +170,7 @@ const Home = () => {
         </div>
       </div>
     </div>
+
   );
 };
 
