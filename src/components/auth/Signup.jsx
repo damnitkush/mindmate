@@ -35,7 +35,9 @@ const Signup = () => {
     if (!fname) alert("Please enter last name");
     if (!email) alert("Please enter email");
     if (!password) alert("Please create a password");
-    signupWithEmail(fname, lname, email, password);
+    if (fname && lname && email && password) {
+      signupWithEmail(fname, lname, email, password);
+    }
   };
   return (
     <div className="w-2/3 px-16 pt-12 duration-700 origin-right">
