@@ -55,9 +55,7 @@ const Navbar = ({ isHome }) => {
           >
             Pricing
           </NavLink>
-          <span className=" hover:text-primary-700  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-primary-700 hover:translate-y-[0.1rem] transition-all  py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300">
-            Resources
-          </span>
+
           <NavLink
             to="/blogs"
             className=" hover:text-primary-700  cursor-pointer relative before:content-[''] before:absolute before:h-[2px] before:w-full before:left-0 before:bottom-0 before:bg-primary-700 hover:translate-y-[0.1rem] transition-all  py-2   before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-all before:duration-300"
@@ -73,11 +71,11 @@ const Navbar = ({ isHome }) => {
         </div>
         <div></div>
         <div className="flex gap-8 items-center justify-between">
-          <DarkModeToggle />
+          {/* <DarkModeToggle /> */}
           <div className="flex gap-2 items-center justify-between">
             <Link
               to="/login"
-              className="py-2 text-center rounded-lg w-28 font-medium shadow-lg   bg-primary-50   cursor-pointer hover:text-primary-50 text-primary-800 hover:bg-primary-600 active:bg-primary-800 transition-all"
+              className="py-2 border-t border-t-primary-100 text-center rounded-lg w-28 font-medium shadow   bg-primary-50   cursor-pointer hover:text-primary-50 text-primary-800 hover:bg-primary-500 active:bg-primary-600 transition-all"
             >
               Login
             </Link>
