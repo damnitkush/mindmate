@@ -13,9 +13,6 @@ const Navbar = ({ isHome }) => {
     if (nav) {
       window.onscroll = function () {
         if (document.documentElement.scrollTop >= 80) {
-          // darkMode
-          // ? nav.classList.add("nav-dark")
-          // : nav.classList.add("nav-light");
           nav.classList.add("from-primary-100");
           nav.classList.add("to-primary-200");
           nav.classList.remove("bg-transparent");
