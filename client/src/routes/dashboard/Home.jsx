@@ -77,7 +77,7 @@ const Home = () => {
             <div className="flex justify-between items-center">
               <div className="flex gap-2 items-center font-medium">
                 <CiCreditCard1 className="text-2xl text-slate-600 dark:text-slate-50" />
-                <span className="dark:text-slate-50">Payment Insights</span>
+                <span className="dark:text-slate-50">Your Progress</span>
               </div>
               <div className="flex items-center border  rounded-lg text-xs pl-2 py-1 text-slate-500 dark:text-slate-300 dark:border-slate-400 dark:hover:bg-slate-700 hover:bg-slate-200 cursor-pointer duration-200">
                 6 months

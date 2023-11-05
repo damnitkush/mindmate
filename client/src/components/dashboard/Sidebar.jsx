@@ -52,7 +52,7 @@ const Sidebar = () => {
               <div className=" pl-8 pr-4 py-3 flex gap-3 items-center justify-between hover:bg-slate-100 dark:hover:bg-slate-700 cursor-pointer transition-all">
                 <span className="flex items-center gap-3">
                   <GoPeople className="text-xl" />
-                  Clients
+                  Games
                 </span>
               </div>
               <div className=" pl-8 pr-4 py-3 flex gap-3 items-center justify-between hover:bg-slate-100 dark:hover:bg-slate-700 cursor-pointer transition-all">
@@ -67,7 +67,7 @@ const Sidebar = () => {
               >
                 <span className="flex items-center gap-3">
                   <MdOutlineCalendarMonth className="text-xl" />
-                  Calendar
+                  Resources
                 </span>
               </NavLink>
             </div>
