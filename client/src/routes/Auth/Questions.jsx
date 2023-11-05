@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from "react";
+import React, { useState  } from "react";
 import { Link } from "react-router-dom";
 
 const Questions = () => {
@@ -16,7 +16,6 @@ const Questions = () => {
     progress: "",
   });
 
-  const [inFormSection, setInFormSection] = useState(false);
   
   function submitQuestions(event) {
     event.preventDefault();

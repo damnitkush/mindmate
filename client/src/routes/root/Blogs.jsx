@@ -3,7 +3,7 @@ import Blog from "../../components/main/Blog";
 import BlogsContext from "../../context/blogsContext";
 
 export const Blogs = () => {
-  const { blogs, setBlogs } = useContext(BlogsContext);
+  const { blogs } = useContext(BlogsContext);
   return (
     <dov div className="px-16 my-20 flex flex-col gap-20">
       <h1 className="text-5xl font-bold">Our Success Stories</h1>

@@ -50,7 +50,7 @@ const ChatSection = () => {
         Saksham
       </div>
       <div className="flex flex-col relative h-full rounded-br-2xl rounded-bl-2xl">
-        <div className="h-full w-full px-6 py-8 flex flex-col justify-end gap-4">
+        <div className="h-full w-full px-6 py-8 flex flex-col justify-end gap-4 ">
           {messageList.map((messageContent) => {
             return (
               <div
