@@ -2,7 +2,7 @@ import { CiCreditCard1 } from "react-icons/ci";
 import { RiArrowDropDownLine } from "react-icons/ri";
 import { BsArrowUpShort } from "react-icons/bs";
 import { FaRupeeSign } from "react-icons/fa";
-import { peertopeer, watch } from "../../assets/assets";
+import { peertopeer, watch,games } from "../../assets/assets";
 import {
   XAxis,
   YAxis,
@@ -165,7 +165,7 @@ const Home = () => {
         </div>         
         </div>
         {/* Peer to Peer & */}
-        <div>
+        <div className="flex  gap-11 w-full">
           {/* Peer to Peer */}
           <div className=" flex flex-col h-fit w-1/3 rounded-xl shadow border-t py-8">
             <p className="flex justify-center items-center  font-bold text-3xl">
@@ -183,6 +183,30 @@ const Home = () => {
                 Chat Now
               </button>
             </div>
+
+            
+          </div >
+          <div className="relative flex flex-col h-fit w-2/3 rounded-xl shadow border-t py-8 bg-primary-100/50">
+            <div className="absolute left-0 top-0 z-10 w-full h-full flex justify-center items-center text-8xl font-bold text-primary-700">Coming Soon !</div>
+            <p className="flex justify-center items-center  font-bold text-3xl opacity-50">
+              Play Games !
+            </p>
+
+              <div className="flex justify-center opacity-50">
+              <img
+              className="scale-75 flex  w-1/2 "
+              src={games}
+              alt=""
+            />
+              </div>
+
+            <div className="flex justify-center mt-9 opacity-50">
+              <button className="bg-primary-700 text-primary-50 flex  w-1/2 justify-center py-2 text-sm hover:bg-primary-800 transition-all active:bg-primary-900 rounded-lg">
+                Play
+              </button>
+            </div>
+
+            
           </div>
         </div>
       </div>

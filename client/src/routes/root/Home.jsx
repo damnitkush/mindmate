@@ -23,12 +23,14 @@ const Home = () => {
               platform.
             </span>
             <div className=" flex gap-4 mt-4">
-              <button className="rounded-lg border  border-transparent bg-primary-800 text-primary-50 hover:bg-primary-900 active:bg-primary-950 transition-all px-8 py-2">
+              <Link to="./Signup"
+              className="rounded-lg border border-transparent bg-primary-800 text-primary-50 hover:bg-primary-900 active:bg-primary-950 transition-all px-8 py-2 ">
                 Join
-              </button>
-              <button className="rounded-lg border border-primary-800 hover:bg-primary-100 text-primary-800 active:bg-primary-200 transition-all px-8 py-2">
+              </Link>
+              <Link to="/Blogs" 
+              className="rounded-lg border border-primary-800 hover:bg-primary-100 text-primary-800 active:bg-primary-200 transition-all px-8 py-2">
                 Learn More
-              </button>
+              </Link>
             </div>
           </div>
           <div className="">
@@ -59,7 +61,8 @@ const Home = () => {
               Our platform creates a safe space for individuals to share their
               stories and support each other.
             </div>
-            <span className="mt-4 text-sm flex gap-1 hover:gap-2 hover:text-primary-700 cursor-pointer transition-all items-center">
+            <span
+             className="mt-4 text-sm flex gap-1 hover:gap-2 hover:text-primary-700 cursor-pointer transition-all items-center">
               Join <AiOutlineArrowRight />
             </span>
           </div>

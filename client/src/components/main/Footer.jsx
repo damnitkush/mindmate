@@ -20,9 +20,10 @@ export const Footer = () => {
             placeholder="Enter your email"
             className="w-full bg-transparent border-b-[0.5px] border-b-gray-200 py-2 placeholder:text-gray-200 outline-none text-white text-sm mobile:text-base font-bodyFont font-light"
           />
-          <button className="w-fit rounded-lg text-sm font-bold mt-2 hover:bg-primary-300 transition-all duration-200 bg-primary-100 text-slate-700 px-8 py-2">
+          <Link to="./Signup"
+           className="w-fit rounded-lg text-sm font-bold mt-2 hover:bg-primary-300 transition-all duration-200 bg-primary-100 text-slate-700 px-8 py-2">
             Subscribe
-          </button>
+          </Link>
         </div>
         <div className=" text-right text-white pt-4  gap-2  sm:gap-0 flex flex-col items-start min-[780px]:items-end ">
           <h2 className="mobile:text-lg font-semibold font-titleFont text-2xl ">

@@ -7,4 +7,5 @@ import peertopeer from "./peertopeer.svg"
 import authBg from "./authBg.svg";
 import contact from "./contact.svg";
 import watch from "./watch.png"
-export { logoColored, logoTransparent, connect, peers, authBg, contact, dp ,peertopeer,watch};
+import games from "./games.svg"
+export { logoColored, logoTransparent, connect, peers, authBg, contact, dp ,peertopeer,watch,games};
