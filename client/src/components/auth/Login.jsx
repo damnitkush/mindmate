@@ -1,8 +1,6 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { logoTransparent } from "../../assets/assets";
-// import DarkModeToggle from "../DarkModeToggle";
 import { FcGoogle } from "react-icons/fc";
-// import { RxGithubLogo } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import {
@@ -22,20 +20,11 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   // Get user using hook
-  const [user, loading] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const { setLocalUser } = useContext(UserContext);
 
   // Navigate on login
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   // if (loading) {
-  //   //   return;
-  //   // }
-
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [user, loading]);
-
-  // Login Function from Firebase
   const loginUser = async () => {
     try {
       setLoader(true);
@@ -64,13 +53,6 @@ const Login = () => {
                 email: user.email,
               };
             });
-        // setLocalUser(() => {
-        //   return {
-        //     fname: userDetails[0].fname,
-        //     lname: userDetails[0].lname,
-        //     email: userDetails[0].email,
-        //   };
-        // });
         console.log(true);
         console.log(userDetails);
         setLoader(false);

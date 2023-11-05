@@ -6,17 +6,17 @@ import { socket } from "../../App";
 const ChatSection = () => {
   const { localUser } = useContext(UserContext);
 
-  const [username, setUsername] = useState(localUser.fname);
-  const [showChat, setShowChat] = useState(false);
-  const [room, setRoom] = useState(1);
+  const [username] = useState(localUser.fname);
+  // const [setShowChat] = useState(false);
+  const [room] = useState(1);
 
   const [currentMessage, setCurrentMessage] = useState("");
   const [messageList, setMessageList] = useState([]);
-  const joinRoom = () => {
-    if (username !== "" && room !== "") {
-      setShowChat(true);
-    }
-  };
+  // const joinRoom = () => {
+  //   if (username !== "" && room !== "") {
+  //     setShowChat(true);
+  //   }
+  // };
   socket.username = username;
   const sendMessage = async () => {
     if (currentMessage !== "") {
@@ -47,7 +47,7 @@ const ChatSection = () => {
   return (
     <div className="rounded-2xl relative bg-primary-50 w-full flex flex-col h-[650px] overflow-scroll border">
       <div className=" text-xl rounded-tl-2xl rounded-tr-2xl bg-white font-bold px-6 text-slate-800 py-4 sticky top-0 ">
-        {messageList.filter((msg) => msg.author !== username)[0].author}
+        Saksham
       </div>
       <div className="flex flex-col relative h-full rounded-br-2xl rounded-bl-2xl">
         <div className="h-full w-full px-6 py-8 flex flex-col justify-end gap-4">

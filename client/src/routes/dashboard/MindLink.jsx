@@ -1,5 +1,4 @@
 import React from "react";
-import ChatContacts from "../../components/dashboard/ChatContacts";
 import ChatSection from "../../components/dashboard/ChatSection";
 
 const MindLink = () => {
