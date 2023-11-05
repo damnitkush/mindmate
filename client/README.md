@@ -30,7 +30,7 @@ The project is a comprehensive online platform called "MindMate" that focuses on
 - Progress Tracking
 ## Demo
 
-Visit [MindMate](https://mindmate.netlify.app) - Peer allies for mental well being!
+Visit [MindMate](https://mindmate-dtu.netlify.app) - Peer allies for mental well being!
     
 ## Installation
 
