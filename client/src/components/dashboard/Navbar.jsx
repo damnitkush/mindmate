@@ -1,12 +1,8 @@
-/* eslint-disable react/prop-types */
-// import React from 'react'
-
 import { Link, useNavigate } from "react-router-dom";
 import { dp } from "../../assets/assets";
 import SwitchDarkMode from "../DarkModeToggle";
 import SearchBar from "./SearchBar";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, logout } from "../../firebase/firebase";
+import { logout } from "../../firebase/firebase";
 import { useContext, useState } from "react";
 import UserContext from "../../context/userContext";
 import Loader from "../Loader";

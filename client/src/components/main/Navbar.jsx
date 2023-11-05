@@ -2,8 +2,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { logoTransparent } from "../../assets/assets";
 import { useEffect } from "react";
-// import DarkModeToggle from "../DarkModeToggle";
-import { auth, logout } from "../../firebase/firebase";
+import { auth } from "../../firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const Navbar = ({ isHome }) => {

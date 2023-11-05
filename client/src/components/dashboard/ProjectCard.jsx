@@ -23,21 +23,21 @@ const ProjectCard = ({ project }) => {
           {/* bg-green-200/60 dark:bg-green-200 text-green-800 */}
           <span
             className={`px-4 py-1 flex items-center gap-2 rounded-full text-xs bg-${
-              project.status == "ongoing"
+              project.status === "ongoing"
                 ? "green"
-                : project.status == "pending"
+                : project.status === "pending"
                 ? "amber"
                 : "red"
             }-200/60 dark:bg-${
-              project.status == "ongoing"
+              project.status === "ongoing"
                 ? "green"
-                : project.status == "pending"
+                : project.status === "pending"
                 ? "amber"
                 : "red"
             }-200 text-${
               project.status === "ongoing"
                 ? "green"
-                : project.status == "pending"
+                : project.status === "pending"
                 ? "amber"
                 : "red"
             }-800`}
@@ -46,7 +46,7 @@ const ProjectCard = ({ project }) => {
               className={`w-2 rounded-full aspect-square bg-${
                 project.status === "ongoing"
                   ? "green"
-                  : project.status == "pending"
+                  : project.status === "pending"
                   ? "amber"
                   : "red"
               }-800`}

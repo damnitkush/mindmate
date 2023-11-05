@@ -1,5 +1,5 @@
 import React from "react";
-import { logoColored, logoTransparent } from "../assets/assets";
+import { logoTransparent } from "../assets/assets";
 
 const Loader = () => {
   return (

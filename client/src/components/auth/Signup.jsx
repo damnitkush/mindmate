@@ -1,13 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-
+import { useContext, useState } from "react";
 import { logoTransparent } from "../../assets/assets";
-// import DarkModeToggle from "../DarkModeToggle";
 import { FcGoogle } from "react-icons/fc";
-// import { RxGithubLogo } from "react-icons/rx";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuthState } from "react-firebase-hooks/auth";
 import "react-toastify/dist/ReactToastify.css";
-import { ToastContainer, toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 import {
   auth,
@@ -23,20 +20,9 @@ const Signup = () => {
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
   const [password, setPassword] = useState("");
-
-  const [user, loading] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const { setLocalUser } = useContext(UserContext);
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   if (loading) {
-  //     //   setLoader(true);
-  //     return;
-  //   }
-  //   if (user) {
-  //     navigate("/");
-  //   }
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [user, loading]);
   const register = async () => {
     if (!fname) alert("Please enter first name");
     if (!fname) alert("Please enter last name");
