@@ -1,8 +1,6 @@
 import { CiCreditCard1 } from "react-icons/ci";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { BsArrowUpShort } from "react-icons/bs";
-import { FaRupeeSign } from "react-icons/fa";
-import { peertopeer, watch,games } from "../../assets/assets";
+import { peertopeer, watch, games } from "../../assets/assets";
 import {
   XAxis,
   YAxis,
@@ -14,6 +12,7 @@ import {
 } from "recharts";
 import { useContext } from "react";
 import Theme from "../../context/darkModeContext";
+import { Link } from "react-router-dom";
 // const data = [
 //   { name: "June", uv: 400, pv: 2400, amt: 2000 },
 //   { name: "July", uv: 700, pv: 4200, amt: 2500 },
@@ -22,33 +21,22 @@ import Theme from "../../context/darkModeContext";
 //   { name: "October", uv: 1000, pv: 2800, amt: 2200 },
 // ];
 const data = [
-  { date: "June", avg_score: 7 },
-  { date: "July", avg_score: 5 },
-  { date: "August", avg_score: 9 },
-  { date: "September", avg_score: 4 },
-  { date: "October", avg_score: 8 },
+  { date: "June", avg_score: 7, mood: "Surprised" },
+  { date: "July", avg_score: 4, mood: "Angry" },
+  { date: "August", avg_score: 5, mood: "Neutral" },
+  { date: "September", avg_score: 9, mood: "Happy" },
+  { date: "October", avg_score: 3, mood: "Sad" },
 ];
-const getIntroOfPage = (label) => {
-  if (label) {
-    return `${label} 2023`;
-  }
-  return "";
-};
+
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
+    console.log(payload);
     return (
-      <div className="border w-48 bg-white dark:bg-slate-800 dark:border-slate-600 rounded-lg px-4 py-2 text-xs flex flex-col gap-2">
+      <div className="border w-fit bg-white dark:bg-slate-800 dark:border-slate-600 rounded-lg px-8 items-center py-2 text-xs flex flex-col">
         <span className="flex text-2xl items-center font-bold dark:text-slate-50">
-          <FaRupeeSign className="text-xl" />
-          {`${payload[0].value}`}
+          {`${payload[0].value} `}
         </span>
-        <div className="flex justify-between">
-          <span className="text-slate-400">{getIntroOfPage(label)}</span>
-          <span className="text-green-600 flex items-center">
-            <BsArrowUpShort className="text-lg" />
-            0.25%
-          </span>
-        </div>
+        <span className="text-lg">{`${payload[0].payload.mood}`}</span>
       </div>
     );
   }
@@ -65,19 +53,16 @@ const Home = () => {
   // const [loss, setLoss] = useState([]);
   return (
     <>
-    {/* Main Div */}
+      {/* Main Div */}
       <div className="flex flex-col gap-16 mb-12">
         {/* Graph and Fitbit */}
         <div className="flex gap-8">
-
-
-
-        {/* Graph */}
+          {/* Graph */}
           <div className="w-2/3  bg-white dark:bg-gray-800 rounded-2xl p-6 flex flex-col gap-10">
             <div className="flex justify-between items-center">
               <div className="flex gap-2 items-center font-medium">
                 <CiCreditCard1 className="text-2xl text-slate-600 dark:text-slate-50" />
-                <span className="dark:text-slate-50">Payment Insights</span>
+                <span className="dark:text-slate-50">Your Progress</span>
               </div>
               <div className="flex items-center border  rounded-lg text-xs pl-2 py-1 text-slate-500 dark:text-slate-300 dark:border-slate-400 dark:hover:bg-slate-700 hover:bg-slate-200 cursor-pointer duration-200">
                 6 months
@@ -135,34 +120,31 @@ const Home = () => {
                   />
                 </AreaChart>
               </ResponsiveContainer>
-
-              
-
             </div>
             <div className="w-full border-b"></div>
           </div>
-          
+
           {/* Fitbit */}
           <div className="w-1/3">
-          {/* Peer to Peer */}
-          <div className=" flex flex-col h-fit w-full rounded-xl shadow border-t py-8">
-            <p className="flex justify-center items-center  font-bold text-3xl">
-              Connect to Fitbit
-            </p>
+            {/* Peer to Peer */}
+            <div className=" flex flex-col h-fit w-full rounded-xl shadow border-t py-8">
+              <p className="flex justify-center items-center  font-bold text-3xl">
+                Connect to Fitbit
+              </p>
 
-            <img
-              className="scale-75 flex justify-center items-center "
-              src={watch}
-              alt=""
-            />
+              <img
+                className="scale-75 flex justify-center items-center "
+                src={watch}
+                alt=""
+              />
 
-            <div className="flex justify-center ">
-              <button className="bg-primary-700 text-primary-50 flex  w-1/2 justify-center py-2 text-sm hover:bg-primary-800 transition-all active:bg-primary-900 rounded-lg">
-                Connect
-              </button>
+              <div className="flex justify-center ">
+                <button className="bg-primary-700 text-primary-50 flex  w-1/2 justify-center py-2 text-sm hover:bg-primary-800 transition-all active:bg-primary-900 rounded-lg">
+                  Connect
+                </button>
+              </div>
             </div>
           </div>
-        </div>         
         </div>
         {/* Peer to Peer & */}
         <div className="flex  gap-11 w-full">
@@ -179,34 +161,31 @@ const Home = () => {
             />
 
             <div className="flex justify-center ">
-              <button className="bg-primary-700 text-primary-50 flex  w-1/2 justify-center py-2 text-sm hover:bg-primary-800 transition-all active:bg-primary-900 rounded-lg">
+              <Link
+                to="/dashboard/mindlink"
+                className="bg-primary-700 text-primary-50 flex  w-1/2 justify-center py-2 text-sm hover:bg-primary-800 transition-all active:bg-primary-900 rounded-lg"
+              >
                 Chat Now
-              </button>
+              </Link>
             </div>
-
-            
-          </div >
+          </div>
           <div className="relative flex flex-col h-fit w-2/3 rounded-xl shadow border-t py-8 bg-primary-100/50">
-            <div className="absolute left-0 top-0 z-10 w-full h-full flex justify-center items-center text-8xl font-bold text-primary-700">Coming Soon !</div>
+            <div className="absolute left-0 top-0 z-10 w-full h-full flex justify-center items-center text-8xl font-bold text-primary-700">
+              Coming Soon !
+            </div>
             <p className="flex justify-center items-center  font-bold text-3xl opacity-50">
               Play Games !
             </p>
 
-              <div className="flex justify-center opacity-50">
-              <img
-              className="scale-75 flex  w-1/2 "
-              src={games}
-              alt=""
-            />
-              </div>
+            <div className="flex justify-center opacity-50">
+              <img className="scale-75 flex  w-1/2 " src={games} alt="" />
+            </div>
 
             <div className="flex justify-center mt-9 opacity-50">
               <button className="bg-primary-700 text-primary-50 flex  w-1/2 justify-center py-2 text-sm hover:bg-primary-800 transition-all active:bg-primary-900 rounded-lg">
                 Play
               </button>
             </div>
-
-            
           </div>
         </div>
       </div>

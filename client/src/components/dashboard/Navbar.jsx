@@ -21,9 +21,6 @@ const Navbar = ({ show, setShow, stopCloseModal }) => {
           <h1 className="text-2xl font-bold dark:text-slate-50">
             Hello, {localUser.fname}
           </h1>
-          <span className="text-sm text-slate-500 dark:text-slate-300">
-            Lets organize your work
-          </span>
         </div>
         <SearchBar />
 
