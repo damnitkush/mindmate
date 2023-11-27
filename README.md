@@ -56,10 +56,10 @@ encouragement, and guidance. This platform aims to offer a combination of anonym
 
 **_TechStack_** <br/> 
 
-**Front End (Client-Side) **- ReactJS, Tailwind CSS, ContextAPI, Expo
-**Backend(Server Side)** - Node.js, Python, MySQL(Database Management), Firebase, MLOps
-**Payment Processing** – Stripe
-**Push Notifications** - Firebase Cloud Messaging
+**Front End (Client-Side)**- ReactJS, Tailwind CSS, ContextAPI, Expo  <br/> 
+**Backend(Server Side)** - Node.js, Python, MySQL(Database Management), Firebase, MLOps  <br/> 
+**Payment Processing** – Stripe <br/> 
+**Push Notifications** - Firebase Cloud Messaging <br/> 
 <br/> 
 We are repeatedly working towards making the website more presentable and various integrations are still ongoing.  <br/> 
 Please reach out to us for any suggestions(Always Welcomed)!!
